@@ -1,0 +1,21 @@
+{
+  "name": "sistema-controle-nivel-agua",
+  "version": "1.0.0",
+  "description": "Dashboard de monitoramento de nível de água com dados do ThingSpeak e alertas por SMS (Twilio). Projeto acadêmico do curso técnico do SENAI.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "alerta": "node alertChecker.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "twilio": "^5.1.1"
+  }
+}
