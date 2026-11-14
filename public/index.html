@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Controle de Nível de Água</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Controle de Nível de Água</div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="dashboard">
+        <h2>Dashboard</h2>
+        <p id="status-conexao" class="status-conexao">Carregando dados...</p>
+        <div class="chart-container">
+            <canvas id="waterLevelChart"></canvas>
+        </div>
+        <div class="meters">
+            <div class="meter" id="meter-1">
+                <h3>Medidor 1</h3>
+                <div class="meter-level">-- cm</div>
+                <div class="meter-indicator">Sem dados</div>
+            </div>
+            <div class="meter" id="meter-2">
+                <h3>Medidor 2</h3>
+                <div class="meter-level">-- cm</div>
+                <div class="meter-indicator">Sem dados</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sms-form">
+        <h2>Enviar SMS de Alerta</h2>
+        <form id="smsForm">
+            <label for="phoneNumber">Número de telefone (com DDI, ex.: +5548999999999):</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required>
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" rows="4" maxlength="320" required></textarea>
+            <button type="submit">Enviar SMS</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
